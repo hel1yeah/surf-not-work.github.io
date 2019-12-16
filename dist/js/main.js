@@ -13,6 +13,12 @@ $(function(){
     slidesToShow: 4,
     slidesToScroll: 1,
     asNavFor: '.header__slider',
+    responsive: [
+      {
+        breakpoint: 962,
+        settings: "unslick"
+      },
+    ]
   });
 
 
@@ -21,7 +27,16 @@ $(function(){
     slidesToScroll: 1,
     prevArrow: '<img class="slider-arrows slider-arrows__left" src = "images/arrows-left.svg" alt = "arrows-right">',
     nextArrow: '<img class="slider-arrows slider-arrows__right" src = "images/arrows-right.svg" alt = "arrows-right">',
-    asNavFor: '.slider-map'
+    asNavFor: '.slider-map',
+    responsive: [
+      {
+        breakpoint: 1211,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+    ]
+    
   });
 
   $('.slider-map').slick({
@@ -88,5 +103,8 @@ $(function(){
     $(this).toggleClass('active')
   });
 
+  $('.menu-btn').on('click', function(){
+    $('.menu').toggleClass('active')
+  });
   
 });
